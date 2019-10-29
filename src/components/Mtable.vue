@@ -10,7 +10,7 @@
       left
     >
     <template v-slot:cell(index)="data">
-      {{ data.index + 1 }}
+      {{(currentPage-1)*perPage + data.index}}
     </template>
     <template v-slot:cell(title)="data">
       <router-link :to="`/lesson/${data.item.id}`">{{data.value}}</router-link>
